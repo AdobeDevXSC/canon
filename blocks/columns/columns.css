@@ -38,6 +38,7 @@
   text-align: center;
   border: 1px solid #e22128;
   border-radius: 0;
+  text-transform: uppercase;
 }
 
 .columns .button-container .primary:hover {
