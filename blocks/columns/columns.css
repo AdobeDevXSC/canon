@@ -45,3 +45,9 @@
   background: #fff;
   color: #e22128;
 }
+
+@media (min-width: 992px) {
+  .columns h3 {
+      font-size: 2.25em !important;
+  }
+}
