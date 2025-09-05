@@ -167,7 +167,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
-        "label": "Test Image",
+        "label": "Image",
         "multi": false
       },
       {
@@ -185,7 +185,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(3)>a:nth-child(1)",
         "value": "",
         "label": "CTA Text 1",
