@@ -59,10 +59,9 @@ footer .footer .section:last-of-type {
 
 footer .footer .section:last-of-type > div {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-flow: column-reverse wrap;
   margin: 0 auto;
   gap: 2rem;
 }

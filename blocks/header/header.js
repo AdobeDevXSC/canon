@@ -219,7 +219,7 @@ export default async function decorate(block) {
     }
   }
 
-  //header html rearrangement
+  // header html rearrangement
   nav.append(navSections);
 
   // hamburger for mobile
