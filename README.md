@@ -1,6 +1,9 @@
-# AEM Block Collection
+# Canon 
+- Edge Delivery Services
+- Document Authoring
 
-This project provides a foundation for starting an AEM Edge Delivery Services project. It includes many common blocks and features a project might need.
+- https://main--canon--adobedevxsc.aem.page/
+- https://main--canon--adobedevxsc.aem.live/
 
 ## DA compatible
 
