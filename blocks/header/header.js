@@ -2,7 +2,7 @@ import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+const isDesktop = window.matchMedia('(min-width: 1200px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -168,6 +168,24 @@ async function buildBreadcrumbs() {
   return breadcrumbs;
 }
 
+function addAnimation() {
+  window.addEventListener('scroll', () => {
+    const header = document.getElementsByClassName('nav-wrapper')[0];
+    const scrollPosition = window.scrollY;
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth >= 1200) {
+      if (scrollPosition > 100) {
+        header.classList.add('minimized');
+      } else {
+        header.classList.remove('minimized');
+      }
+    } else {
+      header.classList.remove('minimized');
+    }
+  });
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -219,6 +237,9 @@ export default async function decorate(block) {
     }
   }
 
+  //header html rearrangement
+  nav.append(navSections);
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
@@ -236,6 +257,8 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  addAnimation();
 
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     navWrapper.append(await buildBreadcrumbs());
