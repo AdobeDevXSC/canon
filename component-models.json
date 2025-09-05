@@ -183,6 +183,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(3)",
+        "value": "",
+        "label": "CTA Text 1",
+        "valueType": "string"
       }
     ]
   },
