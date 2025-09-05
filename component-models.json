@@ -167,7 +167,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "div:nth-child(1)>div:nth-child(1)>picture:nth-child(1)>img:nth-child(3)[src]",
-        "label": "Image",
+        "label": "Test Image",
         "multi": false
       },
       {
