@@ -1,6 +1,8 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  background-color: #000;
+  color: #fff;
 }
 
 .columns img {
@@ -50,6 +52,10 @@
   line-height: 1.38;
   letter-spacing: normal;
   margin-bottom: 12px !important;
+}
+
+.columns h3, .columns p {
+  padding: 0 20% 0 14%;
 }
 
 @media (min-width: 992px) {
