@@ -1,8 +1,6 @@
 .columns > div {
   display: flex;
   flex-direction: column;
-  background-color: #000;
-  color: #fff;
 }
 
 .columns img {
@@ -48,4 +46,14 @@
   .columns h3 {
       font-size: 2.25em !important;
   }
+}
+
+.columns-bkgd-black {
+  background-color: #000;
+  color: #fff;
+}
+
+.columns-bkgd-white {
+  background-color: #fff;
+  color: #000;
 }
