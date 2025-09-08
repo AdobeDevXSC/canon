@@ -1,0 +1,217 @@
+.section.product-carousel-container > div {
+ max-width: 1680px;
+ margin: 0 auto; 
+}
+
+.product-carousel .slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.product-carousel .slider-container {
+  cursor: grab;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  max-width: 93.5%;
+  margin: 0 auto;
+}
+
+.product-carousel .slider-container.dragging {
+  scroll-behavior: auto;
+  cursor: grabbing;
+}
+
+.product-carousel .slider-item {
+  box-sizing: border-box;
+  padding: 12px;
+  flex: 0 0 auto;
+  max-width: calc(100% / 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-carousel .slider-item > a {
+  background: #f8f8f8;
+}
+
+.product-carousel .slider-image {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.product-carousel .slider-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-carousel .slider-content .slider-content__product-name {
+  font-weight: 600;
+}
+
+.product-carousel .add-to-cart .add-to-cart-btn {
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.product-carousel .add-to-cart .add-to-cart-btn:hover {
+  cursor: pointer;
+}
+
+.product-carousel .slider-container[data-step="sm"] .slider-item {
+  max-width: calc(100% / 1);
+}
+
+.product-carousel .slider-control {
+  border: 0;
+  position: absolute;
+  z-index: 1;
+  color: var(--color-neutral-50);
+  background: var(--color-neutral-500);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.product-carousel .slider-control.prev {
+  left: 0;
+}
+
+.product-carousel .slider-control.next {
+  right: 0;
+}
+
+.product-carousel .slider-control.prev.disabled,
+.product-carousel .slider-control.next.disabled {
+  background-color: var(--color-neutral-200);
+}
+
+.product-carousel .slider-item img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+
+  --webkit-user-select: none;
+}
+
+.product-carousel .slider-item .image-wrapper {
+  margin: 0 auto;
+}
+
+.product-carousel .slider-item picture img {
+  border-radius: 5px;
+  width: 238px;
+  height: 238px;
+  object-fit: contain;
+}
+
+@media (width <= 768px) {
+  .product-carousel .slider-item picture img {
+    width: revert-layer;
+  }
+}
+
+.product-carousel .slider-text {
+  background-color: var(--color-neutral-50);
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.product-carousel .slider-text p {
+  margin: 0 5px;
+  padding: 5px;
+  display: contents;
+}
+
+.product-carousel .slider-text a {
+  font-size: inherit;
+  width: 100%;
+}
+
+.product-carousel .slider-text a:hover {
+  color: inherit;
+}
+
+/* icons */
+.product-carousel .gg-chevron-right-o, 
+.product-carousel .gg-chevron-left-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.product-carousel .gg-chevron-right-o::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  top: 50%;
+}
+
+.product-carousel .gg-chevron-left-o::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+}
+
+.product-carousel .slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.product-carousel .slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-brand-700);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.product-carousel .slider-dot.active {
+  background-color: var(--color-brand-500);
+}
+
+.product-carousel .slider-container.dragging a {
+  pointer-events: none;
+}
+
+@media (width >= 768px) {
+  .product-carousel .slider-container[data-step="sm"] .slider-item {
+      max-width: calc(100% / 3.5);
+  }
+}
+
+@media (width >= 1024px) {
+  .product-carousel .slider-container[data-step="sm"] .slider-item {
+      max-width: calc(100% / 4);
+  }
+}
+
+@media (width >= 1280px) {
+  .product-carousel .slider-container[data-step="sm"] .slider-item {
+      max-width: 265px;
+  }
+}
