@@ -141,12 +141,7 @@
           "numberMin": 1,
           "numberMax": 6
         }
-      }
-    ]
-  },
-  {
-    "id": "columns-metadata",
-    "fields": [
+      },
       {
         "component": "select",
         "name": "data-background-color-t",
