@@ -144,7 +144,7 @@
       },
       {
         "component": "select",
-        "name": "data-background-color-t",
+        "name": "background-color-t",
         "value": "",
         "label": "Background Color",
         "valueType": "string",
