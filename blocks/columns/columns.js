@@ -1,7 +1,7 @@
 export default function decorate(block) {
   let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
   console.log('found data attribute for columns:', bkgdColorAttr);
-  if (bkgdColorAttr && bkgdColorAttr !== null) {
+  if (bkgdColorAttr && bkgdColorAttr !== 'null') {
     block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
   }
   
@@ -12,7 +12,7 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const bkgdColorAttrRow = row.getAttribute('data-background-color');
     console.log('found data attribute for columns row:', bkgdColorAttrRow);
-    if ((bkgdColorAttrRow && bkgdColorAttrRow !== null) || (bkgdColorAttr && bkgdColorAttr !== null)) {
+    if ((bkgdColorAttrRow && bkgdColorAttrRow !== 'null') || (bkgdColorAttr && bkgdColorAttr !== 'null')) {
       row.classList?.remove(`columns-bkgd-${bkgdColorAttrRow}`);
       row.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
     }
