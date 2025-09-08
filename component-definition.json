@@ -116,7 +116,8 @@
               "name": "columns",
               "rows": 1,
               "columns": 2,
-              "behaviour": "columns"
+              "behaviour": "columns",
+              "background-color-t": "placeholder"
             }
           }
         },
