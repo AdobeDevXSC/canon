@@ -1,6 +1,6 @@
 export default function decorate(block) {
   // let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
-  let ancestor = block.closest('[data-background-color]');
+  let ancestor = block.closest('.columns-container');
   let bkgdColorAttr = ancestor?.getAttribute('data-background-color');
   console.log('found data attribute for columns:', bkgdColorAttr);
   if (bkgdColorAttr) {
@@ -12,12 +12,6 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
-    const bkgdColorAttrRow = row.getAttribute('data-background-color');
-    console.log('found data attribute for columns row:', bkgdColorAttrRow);
-    if (bkgdColorAttrRow) {
-      block.classList?.remove(`columns-bkgd-null`);
-      block.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
-    }
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
