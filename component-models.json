@@ -144,7 +144,7 @@
       },
       {
         "component": "select",
-        "name": "background-color-t",
+        "name": "div:nth-child(1)[data-background-color-t]",
         "value": "",
         "label": "Background Color",
         "valueType": "string",

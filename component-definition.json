@@ -116,8 +116,7 @@
               "name": "columns",
               "rows": 1,
               "columns": 2,
-              "behaviour": "columns",
-              "background-color-t": "placeholder"
+              "behaviour": "columns"
             }
           }
         },
@@ -136,7 +135,7 @@
           "id": "columns-cell",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div></div>",
+              "unsafeHTML": "<div data-background-color-t=\"placeholder\"></div>",
               "behaviour": "columns-cell"
             }
           }
