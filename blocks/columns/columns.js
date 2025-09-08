@@ -1,5 +1,6 @@
 export default function decorate(block) {
-  let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
+  // let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
+  let bkgdColorAttr = block.parentElement.getAttribute('data-background-color');
   console.log('found data attribute for columns:', bkgdColorAttr);
   if (bkgdColorAttr) {
     block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
