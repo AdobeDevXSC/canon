@@ -158,23 +158,6 @@
           "numberMin": 1,
           "numberMax": 6
         }
-      },
-      {
-        "component": "select",
-        "name": "div:nth-child(1)[data-background-color]",
-        "value": "",
-        "label": "Background Color",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Black",
-            "value": "black"
-          },
-          {
-            "name": "White",
-            "value": "white"
-          }
-        ]
       }
     ]
   },
