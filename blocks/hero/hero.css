@@ -49,16 +49,3 @@
 .hero .button-container .button {
   margin: 0 12px;
 }
-
-.hero .button-container .primary {
-  background-color: #e22128;
-  color: white;
-  text-align: center;
-  border: 1px solid #e22128;
-  border-radius: 0;
-}
-
-.hero .button-container .primary:hover {
-  background: #fff;
-  color: #e22128;
-}
