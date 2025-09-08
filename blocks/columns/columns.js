@@ -10,7 +10,7 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
-    const bkgdColorAttrRow = row.getAttribute('data-background-color-t');
+    const bkgdColorAttrRow = row.getAttribute('data-background-color');
     if (bkgdColorAttrRow || bkgdColorAttr) {
       row.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
     }
