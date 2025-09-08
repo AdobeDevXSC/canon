@@ -211,6 +211,18 @@
     ]
   },
   {
+    "id": "product-carousel",
+    "fields": [
+      {
+        "component": "text",
+        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(1)>a:nth-child(1)[href]",
+        "value": "",
+        "label": "JSON Spreadsheet URL",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "quote",
     "fields": [
       {
