@@ -54,12 +54,7 @@
             "value": "highlight"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "section-metadata",
-    "fields": [
+      },
       {
         "component": "select",
         "name": "data-background-color",
