@@ -11,8 +11,8 @@ export default function decorate(block) {
   // setup image columns
   [...block.children].forEach((row) => {
     const bkgdColorAttrRow = row.getAttribute('data-background-color');
-    console.log('found data attribute for columns row:', bkgdColorAttrRow);
-    if ((bkgdColorAttrRow && bkgdColorAttrRow !== 'null') || (bkgdColorAttr && bkgdColorAttr !== 'null')) {
+    console.log('found data attribute for columns row:', bkgdColorAttrRow +"-tester");
+    if (bkgdColorAttrRow) {
       row.classList?.remove(`columns-bkgd-null`);
       row.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
     }
