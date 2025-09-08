@@ -1,9 +1,9 @@
 export default function decorate(block) {
   let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
   console.log('found data attribute for columns:', bkgdColorAttr);
-  // if (bkgdColorAttr) {
-  //   block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
-  // }
+  if (bkgdColorAttr && bkgdColorAttr !== null) {
+    block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
+  }
   
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
