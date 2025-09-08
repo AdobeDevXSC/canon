@@ -145,6 +145,28 @@
     ]
   },
   {
+    "id": "columns-metadata",
+    "fields": [
+      {
+        "component": "select",
+        "name": "data-background-color-t",
+        "value": "",
+        "label": "Background Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Black",
+            "value": "black"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
