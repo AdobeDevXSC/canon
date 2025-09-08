@@ -57,7 +57,7 @@
       },
       {
         "component": "select",
-        "name": "data-background-color",
+        "name": "background-color",
         "value": "",
         "label": "Background Color",
         "valueType": "string",
