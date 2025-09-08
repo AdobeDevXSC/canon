@@ -15,8 +15,8 @@ export default function decorate(block) {
     const bkgdColorAttrRow = row.getAttribute('data-background-color');
     console.log('found data attribute for columns row:', bkgdColorAttrRow);
     if (bkgdColorAttrRow) {
-      row.classList?.remove(`columns-bkgd-null`);
-      row.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
+      block.classList?.remove(`columns-bkgd-null`);
+      block.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
     }
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
