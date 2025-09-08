@@ -1,5 +1,5 @@
 export default function decorate(block) {
-  let bkgdColorAttr = document.querySelector('.section').getAttribute('data-background-color');
+  let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
   console.log('found data attribute for columns:', bkgdColorAttr);
   // if (bkgdColorAttr) {
   //   block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
@@ -11,6 +11,7 @@ export default function decorate(block) {
   // setup image columns
   [...block.children].forEach((row) => {
     const bkgdColorAttrRow = row.getAttribute('data-background-color');
+    console.log('found data attribute for columns row:', bkgdColorAttrRow);
     if (bkgdColorAttrRow || bkgdColorAttr) {
       row.classList?.add(`columns-bkgd-${bkgdColorAttrRow}`);
     }
