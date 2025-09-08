@@ -10,6 +10,10 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
+    const bkgdColorAttrRow = row.getAttribute('data-background-color-t');
+    if (bkgdColorAttrRow) {
+      row.classList.add(`columns-bkgd-${bkgdColorAttrRow}`);
+    }
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
