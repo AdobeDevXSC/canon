@@ -58,6 +58,28 @@
     ]
   },
   {
+    "id": "section-metadata",
+    "fields": [
+      {
+        "component": "select",
+        "name": "data-background-color",
+        "value": "",
+        "label": "Background Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Black",
+            "value": "black"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {
