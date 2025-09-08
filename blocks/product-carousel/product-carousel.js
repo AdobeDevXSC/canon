@@ -2,7 +2,13 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const link = block.querySelector('a');
-  const response = await fetch(link.href);
+  if (!link) return;
+
+  // Force relative path (avoids CORS issues between .aem.page and .ue.da.live)
+  const url = new URL(link.href, window.location.origin);
+  const relativePath = `${url.pathname}${url.search || ''}`;
+
+  const response = await fetch(relativePath);
 
   if (!response.ok) {
     return;
@@ -23,13 +29,12 @@ export default async function decorate(block) {
       priceMarkup = item.price;
     } else if (item.price && item.discountedPrice) {
       priceMarkup = `
-        <span class="original-price">${item.price}</span>
+        <span class="original-price"><s>${item.price}</s></span>
         <span class="discounted-price">${item.discountedPrice}</span>
       `;
     }
 
-    let card = '';
-    card = `
+    const card = `
       <div class="slider-item ${index === activeIndex ? 'active' : ''}" data-productname="${item.name}">
         <a href="${item.pdpURL}" target="_blank" rel="noopener noreferrer">
           <div class="slider-image">
