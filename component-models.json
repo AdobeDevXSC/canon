@@ -196,16 +196,9 @@
       },
       {
         "component": "text",
-        "name": "div:nth-child(1)>div:nth-child(1)>h1:nth-child(2)",
+        "name": "div:nth-child(1)>div:nth-child(1)>div:nth-child(2)",
         "value": "",
         "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "div:nth-child(1)>div:nth-child(1)>p:nth-child(3)",
-        "value": "",
-        "label": "CTA",
         "valueType": "string"
       }
     ]
