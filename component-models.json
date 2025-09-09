@@ -198,7 +198,7 @@
         "component": "richtext",
         "name": "div:nth-child(1)>div:nth-child(1)>div:nth-child(2)",
         "value": "",
-        "label": "Text",
+        "label": "Text and CTA",
         "valueType": "string"
       }
     ]
