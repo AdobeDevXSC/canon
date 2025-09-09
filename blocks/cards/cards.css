@@ -27,3 +27,15 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards .cards-card-body a {
+  font-weight: 600;
+  line-height: 1.29;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.cards .cards-card-body a:hover {
+  color: var(--button-primary-color);
+  text-decoration: underline;
+}
