@@ -7,10 +7,10 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     moveInstrumentation(row, li);
-    
+
     // Move all children from the row to the li
     while (row.firstElementChild) li.append(row.firstElementChild);
-    
+
     // Apply class names to each child div
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) {
@@ -19,25 +19,29 @@ export default function decorate(block) {
         div.className = 'cards-card-body';
       }
     });
-    
+
     // Check for link and wrap the content inside the <li> with <a> if needed
     const link = li.querySelector('a');
     if (link) {
-      const href = link.href;
-      
+      const href = link?.href;
+
       // Create the <a> element and set the href
       const anchor = document.createElement('a');
       anchor.href = href;
       anchor.setAttribute('aria-label', link.textContent); // Optional, for accessibility
-      
+
       // Move all children of li into the anchor tag
       while (li.firstChild) {
         anchor.appendChild(li.firstChild);
       }
-      
+
       // Replace the content of li with the anchor
       li.appendChild(anchor);
-      link.parentElement.parentElement.remove();
+
+      const linkText = link.textContent.trim();
+      if (linkText) {
+        link.parentElement.innerHTML = linkText;
+      }
     }
 
     // Process images inside <li> and optimize them
