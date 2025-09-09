@@ -22,7 +22,7 @@
 
   /* fonts */
   --body-font-family: proximanova, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: proximanova, roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -218,6 +218,7 @@ a.button.primary {
   border: 1px solid var(--button-primary-color);
   border-radius: 0;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 a.button.primary:hover {
@@ -233,9 +234,19 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+a.button.secondary:hover,
+button.secondary:focus {
+  color: var(--button-primary-color) !important;
+  background-color: #fff;
 }
 
 main img {
