@@ -28,14 +28,14 @@
   object-fit: cover;
 }
 
-.cards .cards-card-body a {
-  font-weight: 600;
-  line-height: 1.29;
-  display: inline-block;
-  font-size: 18px;
+.cards .cards-card-body a.button {
+  font-weight: 600 !important;
+  line-height: 1.29 !important;
+  display: inline-block !important;
+  font-size: 18px !important;
 }
 
-.cards .cards-card-body a:hover {
+.cards .cards-card-body a.button:hover {
   color: var(--button-primary-color);
   text-decoration: underline;
 }
