@@ -1,12 +1,13 @@
 export default function decorate(block) {
-  // let bkgdColorAttr = document.querySelector('.columns-container').getAttribute('data-background-color');
   let ancestor = block.closest('.columns-container');
   let bkgdColorAttr = ancestor?.getAttribute('data-background-color');
+  let textColorAttr = ancestor?.getAttribute('data-text-color');
+
   console.log('found data attribute for columns:', bkgdColorAttr);
-  if (bkgdColorAttr) {
-    block.classList.add(`columns-bkgd-${bkgdColorAttr}`);
-  }
-  
+
+  if (bkgdColorAttr) block.style = `background-color: ${bkgdColorAttr})`;
+  if (textColorAttr) block.style = `color: ${textColorAttr}`;
+
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
