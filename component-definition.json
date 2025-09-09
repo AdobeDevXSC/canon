@@ -135,7 +135,7 @@
           "id": "columns-cell",
           "plugins": {
             "da": {
-              "unsafeHTML": "<div></div>",
+              "unsafeHTML": "<div data-background-color=\"placeholder\"></div>",
               "behaviour": "columns-cell"
             }
           }

@@ -162,6 +162,28 @@
     ]
   },
   {
+    "id": "columns-metadata",
+    "fields": [
+      {
+        "component": "select",
+        "name": "div:nth-child(1)[data-background-color]",
+        "value": "",
+        "label": "111 Background Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Black",
+            "value": "#000000"
+          },
+          {
+            "name": "White",
+            "value": "#FFFFFF"
+          }
+        ]
+      }
+    ]
+  }
+  {
     "id": "fragment",
     "fields": [
       {
