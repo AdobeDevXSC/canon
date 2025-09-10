@@ -139,6 +139,17 @@ function decorateSections(main) {
   });
 }
 
+function decorateColumnsMetadata(main) {
+  const columnsMeta = main.querySelector('div.columns-metadata');
+  if (columnsMeta) {
+    const meta = readBlockConfig(columnsMeta);
+    Object.keys(meta).forEach((key) => {
+      main.dataset[toCamelCase(key)] = meta[key];
+    });
+    columnsMeta.parentNode.remove();
+  }
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -150,6 +161,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateColumnsMetadata(main);
   decorateBlocks(main);
 }
 
