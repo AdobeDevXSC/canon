@@ -161,9 +161,9 @@
       },
       {
         "component": "select",
-        "name": "div:nth-child(1)[data-background-color-too]",
+        "name": "div:nth-child(1)[data-background-color]",
         "value": "",
-        "label": "111 Background Color",
+        "label": "TBD Background Color",
         "valueType": "string",
         "options": [
           {
@@ -182,7 +182,7 @@
       },
       {
         "component": "select",
-        "name": "div:nth-child(1)[data-text-color-too]",
+        "name": "div:nth-child(1)[data-text-color]",
         "value": "",
         "label": "Text Color",
         "valueType": "string",
