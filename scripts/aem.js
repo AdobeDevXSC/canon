@@ -464,7 +464,7 @@ function decorateSections(main) {
 }
 
 function decorateColumnsMetadata(main) {
-  main.querySelectorAll(':scope > div.columns-container').forEach((indColumn) => {
+  main.querySelectorAll(':scope > div').forEach((indColumn) => {
     const columnsMeta = indColumn.querySelector('div.columns-metadata');
     if (columnsMeta) {
       const meta = readBlockConfig(columnsMeta);
