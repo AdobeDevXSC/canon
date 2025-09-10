@@ -172,6 +172,13 @@
         "value": "",
         "label": "Text Color",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "[data-test-hundred]",
+        "value": "",
+        "label": "Try direct data attribute",
+        "valueType": "string"
       }
     ]
   },

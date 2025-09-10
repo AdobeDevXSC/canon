@@ -6,6 +6,7 @@ export default function decorate(block) {
   let textColorAttr = ancestor?.getAttribute('data-text-color');
   const columnsChild = block.querySelector('div');
   console.log('bkgdColorAttr in columns-container class', bkgdColorAttr);
+  // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
   if (!bkgdColorAttr) {
     bkgdColorAttr = columnsChild?.getAttribute('data-background-color');
     console.log('bkgdColorAttr in columns row', bkgdColorAttr);
@@ -16,17 +17,6 @@ export default function decorate(block) {
   }
   if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
   if (textColorAttr) block.style.color = textColorAttr;
-
-  // test
-  // const blockConfig = readBlockConfig(block);
-  // console.log('blockConfig', blockConfig);
-  // const columnsChild = block.querySelector('div');
-  // const testBkgdColorAttr = blockConfig?.['background-color'] || columnsChild?.getAttribute('data-background-color');
-  // const testTextColorAttr = columnsChild?.getAttribute('data-text-color');
-  // console.log('testBkgdColorAttr', testBkgdColorAttr);
-  // console.log('testTextColorAttr', testTextColorAttr);
-  // if (testBkgdColorAttr) block.style.backgroundColor = testBkgdColorAttr;
-  // if (testTextColorAttr) block.style.color = testTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
