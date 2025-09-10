@@ -179,6 +179,27 @@
             "value": "#e22128"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "div:nth-child(1)[data-text-color]",
+        "value": "",
+        "label": "Text Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Black",
+            "value": "#000000"
+          },
+          {
+            "name": "White",
+            "value": "#FFFFFF"
+          },
+          {
+            "name": "TEST",
+            "value": "#e22128"
+          }
+        ]
       }
     ]
   },
