@@ -469,7 +469,7 @@ function decorateColumnsMetadata(main) {
     if (columnsMeta) {
       const meta = readBlockConfig(columnsMeta);
       Object.keys(meta).forEach((key) => {
-        main.dataset[toCamelCase(key)] = meta[key];
+        indColumn.dataset[toCamelCase(key)] = meta[key];
       });
       columnsMeta.parentNode.remove();
     }
