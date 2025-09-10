@@ -5,8 +5,10 @@ export default function decorate(block) {
   let bkgdColorAttr = ancestor?.getAttribute('data-background-color');
   let textColorAttr = ancestor?.getAttribute('data-text-color');
   const columnsChild = block.querySelector('div');
+  console.log('bkgdColorAttr in columns-container class', bkgdColorAttr);
   if (!bkgdColorAttr) {
     bkgdColorAttr = columnsChild?.getAttribute('data-background-color');
+    console.log('bkgdColorAttr in columns row', bkgdColorAttr);
   }
   if (!textColorAttr) {
     textColorAttr = columnsChild?.getAttribute('data-text-color');
