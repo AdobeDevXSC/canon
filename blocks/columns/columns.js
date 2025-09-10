@@ -12,6 +12,7 @@ export default function decorate(block) {
   }
   if (!textColorAttr) {
     textColorAttr = columnsChild?.getAttribute('data-text-color');
+    console.log('textColorAttr in columns row', textColorAttr);
   }
   if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
   if (textColorAttr) block.style.color = textColorAttr;
