@@ -1,3 +1,5 @@
+import { readBlockConfig } from '../../scripts/aem.js';
+
 export default function decorate(block) {
   const ancestor = block.closest('.columns-container');
   const bkgdColorAttr = ancestor?.getAttribute('data-background-color');
@@ -7,8 +9,10 @@ export default function decorate(block) {
   if (textColorAttr) block.style.color = textColorAttr;
 
   // test
+  const blockConfig = readBlockConfig(block);
+  console.log('blockConfig', blockConfig);
   const columnsChild = block.querySelector('div');
-  const testBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
+  const testBkgdColorAttr = blockConfig?.['background-color'] || columnsChild?.getAttribute('data-background-color');
   const testTextColorAttr = columnsChild?.getAttribute('data-text-color');
   console.log('testBkgdColorAttr', testBkgdColorAttr);
   console.log('testTextColorAttr', testTextColorAttr);
