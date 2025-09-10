@@ -464,15 +464,16 @@ function decorateSections(main) {
 }
 
 function decorateColumnsMetadata(main) {
-  const columnsMeta = main.querySelector('div.columns-metadata');
-  if (columnsMeta) {
-    const meta = readBlockConfig(columnsMeta);
-    Object.keys(meta).forEach((key) => {
-      console.log('key', key, meta[key]);
-      main.dataset[toCamelCase(key)] = meta[key];
-    });
-    columnsMeta.parentNode.remove();
-  }
+  main.querySelectorAll(':scope > div.columns-container').forEach((indColumn) => {
+    const columnsMeta = indColumn.querySelector('div.columns-metadata');
+    if (columnsMeta) {
+      const meta = readBlockConfig(columnsMeta);
+      Object.keys(meta).forEach((key) => {
+        main.dataset[toCamelCase(key)] = meta[key];
+      });
+      columnsMeta.parentNode.remove();
+    }
+  });
 }
 
 /**
