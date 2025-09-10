@@ -173,6 +173,10 @@
           {
             "name": "White",
             "value": "#FFFFFF"
+          },
+          {
+            "name": "TEST",
+            "value": "#e22128"
           }
         ]
       }
