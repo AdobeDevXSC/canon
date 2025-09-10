@@ -10,6 +10,8 @@ export default function decorate(block) {
   const columnsChild = block.querySelector('div');
   const testBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
   const testTextColorAttr = columnsChild?.getAttribute('data-text-color');
+  console.log('testBkgdColorAttr', testBkgdColorAttr);
+  console.log('testTextColorAttr', testTextColorAttr);
   if (testBkgdColorAttr) block.style.backgroundColor = testBkgdColorAttr;
   if (testTextColorAttr) block.style.color = testTextColorAttr;
 
