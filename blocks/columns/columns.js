@@ -6,6 +6,13 @@ export default function decorate(block) {
   if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
   if (textColorAttr) block.style.color = textColorAttr;
 
+  // test
+  const columnsChild = block.querySelector('div');
+  const testBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
+  const testTextColorAttr = columnsChild?.getAttribute('data-text-color');
+  if (testBkgdColorAttr) block.style.backgroundColor = testBkgdColorAttr;
+  if (testTextColorAttr) block.style.color = testTextColorAttr;
+
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
