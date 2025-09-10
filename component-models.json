@@ -161,7 +161,7 @@
       },
       {
         "component": "select",
-        "name": "background-color-too",
+        "name": "div:nth-child(1)[data-background-color-too]",
         "value": "",
         "label": "111 Background Color",
         "valueType": "string",
@@ -182,7 +182,7 @@
       },
       {
         "component": "select",
-        "name": "text-color-too",
+        "name": "div:nth-child(1)[data-text-color-too]",
         "value": "",
         "label": "Text Color",
         "valueType": "string",
