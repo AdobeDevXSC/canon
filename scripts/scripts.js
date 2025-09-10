@@ -144,6 +144,7 @@ function decorateColumnsMetadata(main) {
     const columnsMeta = indColumn.querySelector('div.columns-metadata');
     if (columnsMeta) {
       const meta = readBlockConfig(columnsMeta);
+      console.log('IN SCRIPTS.JS, key:', key, 'value:', meta[key]);
       Object.keys(meta).forEach((key) => {
         indColumn.dataset[toCamelCase(key)] = meta[key];
       });
