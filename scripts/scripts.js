@@ -140,7 +140,7 @@ function decorateSections(main) {
 }
 
 function decorateColumnsMetadata(main) {
-  main.querySelectorAll(':scope > div').forEach((indColumn) => {
+  main.querySelectorAll(':scope > *:has(div.columns-container)').forEach((indColumn) => {
     const columnsMeta = indColumn.querySelector('div.columns-metadata');
     if (columnsMeta) {
       const meta = readBlockConfig(columnsMeta);
