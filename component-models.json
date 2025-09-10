@@ -160,46 +160,18 @@
         }
       },
       {
-        "component": "select",
+        "component": "text",
         "name": "div:nth-child(1)[data-background-color]",
         "value": "",
         "label": "TBD Background Color",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Black",
-            "value": "#000000"
-          },
-          {
-            "name": "White",
-            "value": "#FFFFFF"
-          },
-          {
-            "name": "TEST",
-            "value": "#e22128"
-          }
-        ]
+        "valueType": "string"
       },
       {
-        "component": "select",
+        "component": "text",
         "name": "div:nth-child(1)[data-text-color]",
         "value": "",
         "label": "Text Color",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Black",
-            "value": "#000000"
-          },
-          {
-            "name": "White",
-            "value": "#FFFFFF"
-          },
-          {
-            "name": "TEST",
-            "value": "#e22128"
-          }
-        ]
+        "valueType": "string"
       }
     ]
   },
