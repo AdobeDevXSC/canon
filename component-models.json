@@ -175,9 +175,9 @@
       },
       {
         "component": "text",
-        "name": "root[data-test-hundred]",
+        "name": "root[data-text-color-t]",
         "value": "",
-        "label": "Try direct data attribute 1",
+        "label": "Try direct data attribute 2",
         "valueType": "string"
       }
     ]
