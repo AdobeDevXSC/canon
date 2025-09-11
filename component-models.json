@@ -175,7 +175,7 @@
       },
       {
         "component": "text",
-        "name": "div.dataset.test-hundred",
+        "name": "div[data-test-hundred]",
         "value": "",
         "label": "Try direct data attribute",
         "valueType": "string"

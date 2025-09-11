@@ -10,7 +10,7 @@ export default function decorate(block) {
   }
   if (textColorAttr) block.style.color = textColorAttr;
 
-  // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
+  // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values in -models.json
   const columnsChild = block.querySelector('div');
   const ueBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
   const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
