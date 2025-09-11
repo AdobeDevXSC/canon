@@ -6,7 +6,7 @@ export default function decorate(block) {
   const textColorAttr = ancestor?.getAttribute('data-text-color');
   console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr);
 
-  if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
+  if (bkgdColorAttr && bkgdColorAttr !== null) block.style.backgroundColor = bkgdColorAttr;
   const currentBkgdColor = block.style.backgroundColor;
   if (textColorAttr) block.style.color = textColorAttr;
 
