@@ -13,19 +13,19 @@ export default function decorate(block) {
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
   const columnsChild = block.querySelector('div');
   const ueBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
-  console.log('9 bkgdColorAttr in columns row UE: ', ueBkgdColorAttr);
+  console.log('10 bkgdColorAttr in columns row UE: ', ueBkgdColorAttr);
 
   const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
-  console.log('9 textColorAttr in columns row UE: ', ueTextColorAttr);
+  console.log('10 textColorAttr in columns row UE: ', ueTextColorAttr);
 
   if (ueBkgdColorAttr && ueBkgdColorAttr !== null && (!block.style.backgroundColor || block.style.backgroundColor == 'white')) {
-    console.log('9, passing definition test: ', ueBkgdColorAttr, " passing null test: ", ueBkgdColorAttr !== null);
+    console.log('10, passing definition test: ', ueBkgdColorAttr, " passing null test: ", ueBkgdColorAttr !== null);
     block.style.backgroundColor = ueBkgdColorAttr;
   // } else {
   //   console.log('9, failing definition test, resetting to currentBkgdColor: ', currentBkgdColor);
   //   block.style.backgroundColor = currentBkgdColor;
   }
-  console.log('9 block.style.backgroundColor: ', block.style.backgroundColor);
+  console.log('10 block.style.backgroundColor: ', block.style.backgroundColor);
   if (ueTextColorAttr && ueTextColorAttr != null && !block.style.color) block.style.color = ueTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
