@@ -12,13 +12,13 @@ export default function decorate(block) {
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
   const columnsChild = block.querySelector('div');
   const ueBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
-  console.log('1bkgdColorAttr in columns row UE: ', ueBkgdColorAttr);
+  console.log('2 bkgdColorAttr in columns row UE: ', ueBkgdColorAttr);
 
   const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
-  console.log('1textColorAttr in columns row UE: ', ueTextColorAttr);
+  console.log('2 textColorAttr in columns row UE: ', ueTextColorAttr);
 
-  if (ueBkgdColorAttr && ueBkgdColorAttr != null && block.style.backgroundColor && (block.style.backgroundColor == null || block.style.backgroundColor == 'white')) block.style.backgroundColor = ueBkgdColorAttr;
-  if (ueTextColorAttr && ueTextColorAttr != null && block.style.color && block.style.color == null) block.style.color = ueTextColorAttr;
+  if (ueBkgdColorAttr && ueBkgdColorAttr != null && (block.style.backgroundColor == null || block.style.backgroundColor == 'white')) block.style.backgroundColor = ueBkgdColorAttr;
+  if (ueTextColorAttr && ueTextColorAttr != null && block.style.color == null) block.style.color = ueTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
