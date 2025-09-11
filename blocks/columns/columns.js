@@ -13,6 +13,7 @@ export default function decorate(block) {
     console.log('bkgdColorAttr in columns row', bkgdColorAttr);
   }
   if (textColorAttr == null) {
+    console.log('textColorAttr in columns-container class is NULL, why? checking columns row: ', textColorAttr);
     textColorAttr = columnsChild?.getAttribute('data-text-color');
     console.log('textColorAttr in columns row', textColorAttr);
   }
