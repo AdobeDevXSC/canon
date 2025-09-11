@@ -4,10 +4,12 @@ export default function decorate(block) {
   const ancestor = block.closest('.columns-container');
   const bkgdColorAttr = ancestor?.getAttribute('data-background-color');
   const textColorAttr = ancestor?.getAttribute('data-text-color');
-  console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr);
+  console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr, ' current block.style.backgroundColor: ', block.style.backgroundColor);
 
-  if (bkgdColorAttr && bkgdColorAttr !== null) block.style.backgroundColor = bkgdColorAttr;
-  const currentBkgdColor = block.style.backgroundColor;
+  if (bkgdColorAttr && bkgdColorAttr !== null) {
+    block.style.backgroundColor = bkgdColorAttr;
+    console.log('passing SECTION test, setting block.style.backgroundColor to: ', bkgdColorAttr);
+  }
   if (textColorAttr) block.style.color = textColorAttr;
 
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
