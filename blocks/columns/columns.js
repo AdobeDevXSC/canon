@@ -17,8 +17,8 @@ export default function decorate(block) {
   const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
   console.log('textColorAttr in columns row UE', ueTextColorAttr);
 
-  if (ueBkgdColorAttr && ueBkgdColorAttr != null) block.style.backgroundColor = ueBkgdColorAttr;
-  if (ueTextColorAttr && ueTextColorAttr != null) block.style.color = ueTextColorAttr;
+  if (ueBkgdColorAttr && ueBkgdColorAttr != null && block.style.backgroundColor && block.style.backgroundColor !== '') block.style.backgroundColor = ueBkgdColorAttr;
+  if (ueTextColorAttr && ueTextColorAttr != null && block.style.color && block.style.color !== '') block.style.color = ueTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
