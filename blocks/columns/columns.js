@@ -20,7 +20,7 @@ export default function decorate(block) {
   const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
   console.log('10 textColorAttr in columns row UE: ', ueTextColorAttr);
 
-  if (ueBkgdColorAttr && ueBkgdColorAttr !== null && (!block.style.backgroundColor || block.style.backgroundColor == 'white')) {
+  if (ueBkgdColorAttr && ueBkgdColorAttr !== null) {
     console.log('10, passing definition test: ', ueBkgdColorAttr, " passing null test: ", ueBkgdColorAttr !== null);
     block.style.backgroundColor = ueBkgdColorAttr;
   // } else {
@@ -28,7 +28,7 @@ export default function decorate(block) {
   //   block.style.backgroundColor = currentBkgdColor;
   }
   console.log('10 block.style.backgroundColor: ', block.style.backgroundColor);
-  if (ueTextColorAttr && ueTextColorAttr != null && !block.style.color) block.style.color = ueTextColorAttr;
+  if (ueTextColorAttr && ueTextColorAttr != null) block.style.color = ueTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
