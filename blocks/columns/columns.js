@@ -21,9 +21,9 @@ export default function decorate(block) {
   if (ueBkgdColorAttr && ueBkgdColorAttr !== null && (!block.style.backgroundColor || block.style.backgroundColor == 'white')) {
     console.log('9, passing definition test: ', ueBkgdColorAttr, " passing null test: ", ueBkgdColorAttr !== null);
     block.style.backgroundColor = ueBkgdColorAttr;
-  } else {
-    console.log('9, failing definition test, resetting to currentBkgdColor: ', currentBkgdColor);
-    block.style.backgroundColor = currentBkgdColor;
+  // } else {
+  //   console.log('9, failing definition test, resetting to currentBkgdColor: ', currentBkgdColor);
+  //   block.style.backgroundColor = currentBkgdColor;
   }
   console.log('9 block.style.backgroundColor: ', block.style.backgroundColor);
   if (ueTextColorAttr && ueTextColorAttr != null && !block.style.color) block.style.color = ueTextColorAttr;
