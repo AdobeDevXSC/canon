@@ -175,7 +175,7 @@
       },
       {
         "component": "text",
-        "name": "div:nth-child(0)[data-test-hundred]",
+        "name": "root[data-test-hundred]",
         "value": "",
         "label": "Try direct data attribute 1",
         "valueType": "string"
