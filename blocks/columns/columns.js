@@ -4,13 +4,13 @@ export default function decorate(block) {
   const ancestor = block.closest('.columns-container');
   const bkgdColorAttr = ancestor?.getAttribute('data-background-color');
   const textColorAttr = ancestor?.getAttribute('data-text-color');
-  const columnsChild = block.querySelector('div');
   console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr);
 
   if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
   if (textColorAttr) block.style.color = textColorAttr;
 
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
+  const columnsChild = block.querySelector('div');
   const ueBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
   console.log('bkgdColorAttr in columns row UE', ueBkgdColorAttr);
 
