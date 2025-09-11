@@ -7,11 +7,11 @@ export default function decorate(block) {
   const columnsChild = block.querySelector('div');
   console.log('bkgdColorAttr in columns-container class', bkgdColorAttr);
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
-  if (!bkgdColorAttr) {
+  if (bkgdColorAttr == null) {  
     bkgdColorAttr = columnsChild?.getAttribute('data-background-color');
     console.log('bkgdColorAttr in columns row', bkgdColorAttr);
   }
-  if (!textColorAttr) {
+  if (textColorAttr == null) {
     textColorAttr = columnsChild?.getAttribute('data-text-color');
     console.log('textColorAttr in columns row', textColorAttr);
   }
