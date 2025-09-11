@@ -5,9 +5,10 @@ export default function decorate(block) {
   let bkgdColorAttr = ancestor?.getAttribute('data-background-color');
   let textColorAttr = ancestor?.getAttribute('data-text-color');
   const columnsChild = block.querySelector('div');
-  console.log('bkgdColorAttr in columns-container class', bkgdColorAttr);
+  console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr);
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
   if (bkgdColorAttr == null) {  
+    console.log('bkgdColorAttr in columns-container class is NULL, why? checking columns row: ', bkgdColorAttr);
     bkgdColorAttr = columnsChild?.getAttribute('data-background-color');
     console.log('bkgdColorAttr in columns row', bkgdColorAttr);
   }
