@@ -2,23 +2,23 @@ import { readBlockConfig } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const ancestor = block.closest('.columns-container');
-  let bkgdColorAttr = ancestor?.getAttribute('data-background-color');
-  let textColorAttr = ancestor?.getAttribute('data-text-color');
+  const bkgdColorAttr = ancestor?.getAttribute('data-background-color');
+  const textColorAttr = ancestor?.getAttribute('data-text-color');
   const columnsChild = block.querySelector('div');
   console.log('bkgdColorAttr in columns-container class: ', bkgdColorAttr);
+
+  if (bkgdColorAttr) block.style.backgroundColor = bkgdColorAttr;
+  if (textColorAttr) block.style.color = textColorAttr;
+
   // for UE as value needs to be saved in different element due to having to walk the DOM tree to set the values
-  if (bkgdColorAttr == null) {  
-    console.log('bkgdColorAttr in columns-container class is NULL, why? checking columns row: ', bkgdColorAttr);
-    bkgdColorAttr = columnsChild?.getAttribute('data-background-color');
-    console.log('bkgdColorAttr in columns row', bkgdColorAttr);
-  }
-  if (textColorAttr == null) {
-    console.log('textColorAttr in columns-container class is NULL, why? checking columns row: ', textColorAttr);
-    textColorAttr = columnsChild?.getAttribute('data-text-color');
-    console.log('textColorAttr in columns row', textColorAttr);
-  }
-  if (bkgdColorAttr != null) block.style.backgroundColor = bkgdColorAttr;
-  if (textColorAttr != null) block.style.color = textColorAttr;
+  const ueBkgdColorAttr = columnsChild?.getAttribute('data-background-color');
+  console.log('bkgdColorAttr in columns row UE', ueBkgdColorAttr);
+
+  const ueTextColorAttr = columnsChild?.getAttribute('data-text-color');
+  console.log('textColorAttr in columns row UE', ueTextColorAttr);
+
+  if (ueBkgdColorAttr && ueBkgdColorAttr != null) block.style.backgroundColor = ueBkgdColorAttr;
+  if (ueTextColorAttr && ueTextColorAttr != null) block.style.color = ueTextColorAttr;
 
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
