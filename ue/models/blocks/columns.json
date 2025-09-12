@@ -27,7 +27,7 @@
       "id": "columns-cell",
       "plugins": {
         "da": {
-          "unsafeHTML": "<div></div>",
+          "unsafeHTML": "<div data-background-color=\"placeholder\"></div>",
           "behaviour": "columns-cell"
         }
       }
@@ -47,6 +47,27 @@
             "numberMin": 1,
             "numberMax": 6
           }
+        },
+        {
+          "component": "text",
+          "name": "div:nth-child(1)[data-background-color]",
+          "value": "",
+          "label": "Background Color",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "div:nth-child(1)[data-text-color]",
+          "value": "",
+          "label": "Text Color",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "root[data-text-color-t]",
+          "value": "",
+          "label": "Try direct data attribute 3",
+          "valueType": "string"
         }
       ]
     }

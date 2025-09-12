@@ -57,7 +57,7 @@
       },
       {
         "component": "select",
-        "name": "background-color",
+        "name": "data-background-color",
         "value": "",
         "label": "Background Color",
         "valueType": "string",
@@ -177,7 +177,7 @@
         "component": "text",
         "name": "root[data-text-color-t]",
         "value": "",
-        "label": "Try direct data attribute 2",
+        "label": "Try direct data attribute 3",
         "valueType": "string"
       }
     ]

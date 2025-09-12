@@ -26,6 +26,23 @@
               "value": "highlight"
             }
           ]
+        },
+        {
+          "component": "select",
+          "name": "data-background-color",
+          "value": "",
+          "label": "Background Color",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Black",
+              "value": "black"
+            },
+            {
+              "name": "White",
+              "value": "white"
+            }
+          ]
         }
       ]
     }
@@ -43,6 +60,7 @@
         "form",
         "hero",
         "image",
+        "product-carousel",
         "quote",
         "search",
         "tabs",
